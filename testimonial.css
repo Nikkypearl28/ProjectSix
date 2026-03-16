@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..100&display=swap');
 
-* {
+/* * {
     box-sizing: border-box;
-}
+} */
 
 
 body {
@@ -12,19 +12,22 @@ body {
     padding: 2rem;
    margin-top: 1.5rem;
    margin-bottom: 1.5rem;
+   overflow-x: hidden;
 }
 
  .Main-Container {
         grid-template-areas: "card1"
                              "card1"
                              "card2"
-                             "card3"
-                              "card3"
                              "card4"
                              "card5"
-                             "card5";
+                             "card5"
+                             "card3"
+                              "card3";
         width: 100%;
         display: grid;
+        gap: 1.5rem;
+        overflow-x: hidden;
     }
 
 
@@ -39,15 +42,15 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
+    z-index: 50;
 }
 .card1 {
     grid-area: card1;
     background-color: hsl(263, 55%, 52%);
-   
     border-radius: 10px;
-    padding: 2rem;
+    padding: 3rem;
+    
     position: relative;
-    height: 16.5rem;
     box-shadow: 0 6px 16px hsl(0%, 0%, 0.15%);
 }
 .profile-pic{
@@ -82,7 +85,7 @@ body {
     color: hsl(0, 0%, 100%);
     padding: 0;
     margin: 0;
-    font-size: 0.80rem;
+    font-size: 1rem;
     gap: 0.5rem;
      margin-bottom: 1rem;
      margin-top: 1rem;
@@ -94,7 +97,7 @@ body {
     color: hsl(214, 17%, 92%);
     padding: 0;
     margin: 0;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     opacity: 0.50;
     
 }
@@ -106,8 +109,7 @@ body {
     border-radius: 10px;
     padding: 2rem;
     position: relative;
-    width: 15rem;
-    height: 16.5rem;
+    height: 13.5rem;
     box-shadow: 0 6px 16px hsl(0%, 0%, 0.15%);
 }
 .card2 img{
@@ -133,7 +135,7 @@ body {
     color: hsl(0, 0%, 100%);
     padding: 0;
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
     gap: 0.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -143,7 +145,7 @@ body {
     color: hsl(214, 17%, 92%);
     padding: 0;
     margin: 0;
-    font-size: 0.75rem;
+    font-size: 0.90rem;
      opacity: 0.50;
 }
 .card3 {
@@ -152,8 +154,6 @@ body {
     border-radius: 10px;
     padding: 2rem;
     position: relative;
-    width: 15rem;
-    height: 35rem;
     box-shadow: 0 6px 16px hsl(0%, 0%, 0.15%);
 }
 .card3 img{
@@ -179,7 +179,7 @@ body {
     color: hsl(217, 19%, 35%);
     padding: 0;
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
     gap: 0.5rem;
     font-weight: 600;
      margin-bottom: 1rem;
@@ -198,8 +198,7 @@ body {
     border-radius: 10px;
     padding: 2rem;
     position: relative;
-    width: 15rem;
-    height: 16.5rem;
+    height: 10rem;
     box-shadow: 0 6px 16px hsl(0%, 0%, 0.15%);
 }
 .card4 img{
@@ -245,7 +244,7 @@ body {
     border-radius: 10px;
     padding: 2rem;
     position: relative;
-    height: 16.5rem;
+   height: auto;
     box-shadow: 0 6px 16px hsl(0%, 0%, 0.15%);
 }
 .card5 img{
@@ -273,18 +272,20 @@ body {
     color: hsl(214, 17%, 92%);
     padding: 0;
     margin: 0;
-    font-size: 0.85rem;
+    font-size: 1.25rem;
+    font-weight: 500;
     gap: 0.5rem;
     margin-bottom: 1rem;
     font-weight: 600;
-     margin-top: 1.2rem;
+     margin-top: 1rem;
 }
 .card5 article p:last-child {
     color: hsl(0, 0%, 100%);
     padding: 0;
     margin: 0;
-    font-size: 0.75rem;
+    font-size: 0.80rem;
     opacity: 0.50;
+    margin-top: 1rem;
 }
 
 
@@ -295,12 +296,76 @@ body {
     
     grid-template-areas: "card1 card1 card2 card3" 
                          "card4 card5 card5 card3";
-    gap: 1.5rem;
-    width: 80%;
+    /* width: 90%; */
     margin: 0 auto;
     
+}   
+.card1 {
+    height: 16.5rem;
+    padding: 2rem;
 }
+.card1 article p:first-child {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+}
+.card1 article p:last-child {
+    font-size: 0.85rem;
+    margin-top: 2rem;
 
-   
+}
+.card2 {
+    height: 16.5rem;
+
+}
+.card2 article p:first-child {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.card2 article p:last-child {
+    font-size: 1rem;
+     opacity: 0.50;
+    margin-top: 1.5rem;
+}
+.card4 {
+    height: 16.5rem;
+}
+.card5 {
+    height: 16.5rem;
+}
+.card3 {
+    height: auto;
+    border-radius: 10px;
     
+}
+.card3 article p:first-child {
+    font-size: 1.3rem;
+}
+.card3 article p:last-child {
+    font-size: 1.1rem;
+}
+.card4 {
+    height: 15rem;
+}
+.card4 article p:first-child {
+    font-size: 1.5rem;
+        margin-bottom: 1rem;
+        margin-top: 1.5rem;
+}
+.card4 article p:last-child {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+}
+.card5 {
+    height: 15rem;
+    border-radius: 10px;
+}
+.card5 article p:first-child {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+}
+.card5 article p:last-child {
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+}
 }
